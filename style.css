@@ -405,8 +405,22 @@ footer { text-align: center; padding: 35px; background: var(--bg-alt); color: va
     .cert-grid-vertical { grid-template-columns: 1fr; }
     .cert-thumb-large { height: 700px; }
     .skills-category-grid { grid-template-columns: 1fr; }
-    .portfolio-grid-2 { grid-template-columns: 1fr; }
+    /* Fix untuk Section Portfolio Mobile */
+    .portfolio-grid-2 { 
+        grid-template-columns: 1fr; 
+        gap: 25px; /* Gap diperkecil sedikit agar lebih proporsional di HP */
+    }
     
+    .portfolio-card {
+        min-width: 0; /* INI KUNCI UTAMANYA: Memaksa card bisa menyusut mengikuti layar HP, mencegah grid blowout */
+        padding: 15px; /* Padding dikecilin dari 30px jadi 15px supaya ruang konten lebih lega di HP */
+        width: 100%;
+        overflow: hidden; /* Memastikan kalau ada elemen bandel, bakal kepotong rapi */
+    }
+
+    .card-slider-wrapper {
+        width: 100%; 
+    }
     .contact-details li { justify-content: center; } 
     .social-links { justify-content: center; }       
     .social-title { text-align: center; }
